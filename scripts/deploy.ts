@@ -25,6 +25,53 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const PROJECT_ROOT = join(__dirname, '..');
 
+// Load .prod.vars file if it exists (for npm compatibility, bun uses --env-file)
+function loadProdVars(): void {
+	const prodVarsPath = join(PROJECT_ROOT, '.prod.vars');
+	if (!existsSync(prodVarsPath)) {
+		return; // File doesn't exist, skip loading
+	}
+
+	try {
+		const content = readFileSync(prodVarsPath, 'utf-8');
+		const lines = content.split('\n');
+
+		for (const line of lines) {
+			// Skip comments and empty lines
+			const trimmed = line.trim();
+			if (!trimmed || trimmed.startsWith('#') || !trimmed.includes('=')) {
+				continue;
+			}
+
+			// Parse KEY="VALUE" or KEY='VALUE' or KEY=VALUE format
+			// Match: KEY=value, KEY="value", KEY='value'
+			const match = trimmed.match(/^([A-Z_][A-Z0-9_]*)\s*=\s*(.+)$/);
+			if (match) {
+				const [, key, value] = match;
+				let parsedValue = value.trim();
+				
+				// Remove surrounding quotes if present
+				if (
+					(parsedValue.startsWith('"') && parsedValue.endsWith('"')) ||
+					(parsedValue.startsWith("'") && parsedValue.endsWith("'"))
+				) {
+					parsedValue = parsedValue.slice(1, -1);
+				}
+				
+				// Only set if not already in process.env (allows override from shell)
+				if (!process.env[key] && parsedValue) {
+					process.env[key] = parsedValue;
+				}
+			}
+		}
+	} catch (error) {
+		console.warn('⚠️  Could not load .prod.vars file:', error instanceof Error ? error.message : String(error));
+	}
+}
+
+// Load environment variables from .prod.vars
+loadProdVars();
+
 // Types for configuration
 interface WranglerConfig {
 	name: string;

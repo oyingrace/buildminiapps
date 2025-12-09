@@ -11,7 +11,7 @@
 		"typecheck": "tsc -b --incremental --noEmit",
 		"lint": "eslint .",
 		"preview": "npm run build && vite preview",
-		"deploy": "bun --env-file .prod.vars scripts/deploy.ts",
+		"deploy": "tsx scripts/deploy.ts",
 		"cf-typegen": "wrangler types --include-runtime false",
 		"test": "vitest run",
 		"test:watch": "vitest",
