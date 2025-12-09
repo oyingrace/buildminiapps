@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "vibesdk",
+      "name": "buildminiapps",
       "dependencies": {
         "@ashishkumar472/cf-git": "1.0.5",
         "@babel/generator": "^7.28.5",
