@@ -229,7 +229,7 @@ export function LoginModal({
 											? 'Authentication required for this action'
 											: hasEmailAuth && mode === 'register'
 											? 'Join to start building amazing applications'
-											: 'Sign in to save your apps and access your workspace'}
+											: 'Sign in to save your mini-apps and access your workspace'}
 									</p>
 								</div>
 							</div>
