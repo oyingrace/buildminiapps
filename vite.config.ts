@@ -27,9 +27,15 @@ export default defineConfig({
 	plugins: [
 		react(),
 		svgr(),
-		cloudflare({
-			configPath: 'wrangler.jsonc',
-		}),
+		// Allow running the frontend without spinning up Cloudflare Workers.
+		// Set NO_CF_PLUGIN=1 to skip the Cloudflare vite plugin (useful on macOS < 13.5).
+		...(process.env.NO_CF_PLUGIN === '1'
+			? []
+			: [
+					cloudflare({
+						configPath: 'wrangler.jsonc',
+					}),
+			  ]),
 		tailwindcss(),
 		// sentryVitePlugin({
 		// 	org: 'cloudflare-0u',
