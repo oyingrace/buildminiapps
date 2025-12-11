@@ -89,7 +89,7 @@ export function GlobalHeader() {
 									}}
 								/>
 								<span className="ml-3 text-lg font-semibold text-text-primary tracking-tight">
-									Buildminiapps
+								BuildMiniApps
 								</span>
 							</div>
 						)}
