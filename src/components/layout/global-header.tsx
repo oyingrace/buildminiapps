@@ -4,7 +4,6 @@ import { AuthButton } from '../auth/auth-button';
 import { motion } from 'framer-motion';
 import { useAuth } from '@/contexts/auth-context';
 import { ChevronRight, GithubIcon, AlertCircle } from 'lucide-react';
-import { CloudflareLogo } from '../icons/logos';
 import { usePlatformStatus } from '@/hooks/use-platform-status';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -51,7 +50,9 @@ export function GlobalHeader() {
 								className='flex items-center'
 							>
 								<SidebarTrigger className="h-8 w-8 text-text-primary rounded-md hover:bg-orange-50/40 transition-colors duration-200" />
-								<CloudflareLogo
+								<img
+									src="/logo.png"
+									alt="Buildminiapps logo"
 									className="flex-shrink-0 mx-auto transition-all duration-300"
 									style={{
 										width: '28px',
@@ -60,7 +61,7 @@ export function GlobalHeader() {
 									}}
 								/>
 								<span className="ml-3 text-lg font-semibold text-text-primary tracking-tight">
-									Buildminiapps
+									BuildMiniApps
 								</span>
 								{hasMaintenanceMessage && (
 									<button
@@ -78,7 +79,9 @@ export function GlobalHeader() {
 							</motion.div>
 						) : (
 							<div className="flex items-center">
-								<CloudflareLogo
+								<img
+									src="/logo.png"
+									alt="Buildminiapps logo"
 									className="flex-shrink-0 mx-auto transition-all duration-300"
 									style={{
 										width: '28px',
