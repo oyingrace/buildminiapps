@@ -30,6 +30,7 @@ dist-ssr
 .prod.vars
 .env
 .env.*
+.env.local
 
 runner/downloads
 /generated/prisma
