@@ -228,7 +228,7 @@ export function LoginModal({
 										{actionContext
 											? 'Authentication required for this action'
 											: hasEmailAuth && mode === 'register'
-											? 'Join to start building amazing applications'
+											? 'Join to start building amazing mini-apps'
 											: 'Sign in to save your mini-apps and access your workspace'}
 									</p>
 								</div>
