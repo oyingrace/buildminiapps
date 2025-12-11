@@ -59,6 +59,9 @@ export function GlobalHeader() {
 										marginLeft: '8px',
 									}}
 								/>
+								<span className="ml-3 text-lg font-semibold text-text-primary tracking-tight">
+									Buildminiapps
+								</span>
 								{hasMaintenanceMessage && (
 									<button
 										type="button"
@@ -74,7 +77,18 @@ export function GlobalHeader() {
 								)}
 							</motion.div>
 						) : (
-							<div></div>
+							<div className="flex items-center">
+								<CloudflareLogo
+									className="flex-shrink-0 mx-auto transition-all duration-300"
+									style={{
+										width: '28px',
+										height: '28px',
+									}}
+								/>
+								<span className="ml-3 text-lg font-semibold text-text-primary tracking-tight">
+									Buildminiapps
+								</span>
+							</div>
 						)}
 
 
@@ -86,15 +100,6 @@ export function GlobalHeader() {
 							transition={{ delay: 0.2 }}
 							className="flex flex-wrap items-center justify-end gap-3 justify-self-end"
 						>
-							
-							{/* Disable cost display for now */}
-							{/* {user && (
-							<CostDisplay
-								{...extractUserAnalyticsProps(analytics)}
-								loading={analyticsLoading}
-								variant="inline"
-							/>
-						)} */}
 							<AuthButton />
 						</motion.div>
 					</div>
