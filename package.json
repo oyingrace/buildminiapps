@@ -12,6 +12,7 @@
   "dependencies": {
     "@coinbase/wallet-sdk": "^4.3.7",
     "@reown/appkit-adapter-wagmi": "^1.8.16",
+    "@reown/appkit": "^1.8.14",
     "@daveyplate/better-auth-ui": "^3.2.13",
     "@tailwindcss/vite": "^4.1.17",
     "axios": "^1.13.2",
