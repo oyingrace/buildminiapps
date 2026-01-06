@@ -1,23 +1,16 @@
 {
-  "name": "buildminiapps",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "buildminiapps-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oyingrace/buildminiapps.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/oyingrace/buildminiapps/issues"
-  },
-  "homepage": "https://github.com/oyingrace/buildminiapps#readme",
-  "description": "",
   "dependencies": {
-    "@coinbase/wallet-sdk": "^4.3.7"
+    "@coinbase/wallet-sdk": "^4.3.7",
+    "@reown/appkit-adapter-wagmi": "^1.8.16"
   }
 }
