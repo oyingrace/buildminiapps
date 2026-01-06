@@ -149,3 +149,13 @@ export const dummyConversations = [
     { id: 'e4794880-930b-4cbd-928c-fed981fdebe9', role: 'user', content: 'create a cta section before footer', timestamp: '2025-11-14 10:22:55.409', projectId: '6cd61d42-04e3-433f-9fcc-aba884e4115f' },
     { id: 'ec1d0622-a904-4227-89c8-47300c4cf28e', role: 'assistant', content: 'Now making changes to your website...', timestamp: '2025-11-14 10:59:50.031', projectId: '6cd61d42-04e3-433f-9fcc-aba884e4115f' },
 ];
+
+export const dummyVersion = [
+    {
+        id: 'zyx',
+        code: '',
+        description: 'code updated',
+        timestamp: '2025-11-14 10:51:14.997',
+        projectId: '6cd61d42-04e3-433f-9fcc-aba884e4115f'
+    }
+]
