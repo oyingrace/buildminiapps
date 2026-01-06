@@ -30,3 +30,9 @@ export const appPlans = [
         features: ['Upto 200 Creations', 'Increased Revisions', 'Advanced AI Models', 'email + chat support', 'Advanced analytics',],
     }
 ]
+
+export const dummyUser = {
+    name: "GreatStack",
+    id: 'xyz',
+    email: 'test@greatstack.dev'
+}
