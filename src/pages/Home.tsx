@@ -50,3 +50,15 @@ const Home = () => {
             <p className="text-center text-base max-w-md mt-2">
                 Create, customize and publish website faster than ever with our AI Site Builder.
             </p>
+
+            <form onSubmit={onSubmitHandler} className="bg-white/10 max-w-2xl w-full rounded-xl p-4 mt-10 border border-indigo-600/70 focus-within:ring-2 ring-indigo-500 transition-all">
+                <textarea onChange={e => setInput(e.target.value)} className="bg-transparent outline-none text-gray-300 resize-none w-full" rows={4} placeholder="Describe your presentation in details" required />
+                <button className="ml-auto flex items-center gap-2 bg-gradient-to-r from-[#CB52D4] to-indigo-600 rounded-md px-4 py-2">
+                    {!loading ? 'Create with AI' : (
+                        <>
+                            Creating <Loader2Icon className='animate-spin size-4 text-white' />
+                        </>
+                    )}
+
+                </button>
+            </form>
