@@ -26,3 +26,9 @@ const handleChange = (field: string, value: string) => {
     setValues(newValues)
     onUpdate({ [field]: value });
 }
+
+const handleStyleChange = (styleName: string, value: string) => {
+    const newStyles = { ...values.styles, [styleName]: value };
+    setValues({ ...values, styles: newStyles });
+    onUpdate({ styles: { [styleName]: value } })
+}
