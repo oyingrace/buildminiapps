@@ -17,3 +17,12 @@ interface EditorPanelProps {
     onUpdate: (updates: any) => void;
     onClose: () => void;
 }
+
+const handleChange = (field: string, value: string) => {
+    const newValues = { ...values, [field]: value };
+    if (field in values.styles) {
+        newValues.styles = { ...values.styles, [field]: value }
+    }
+    setValues(newValues)
+    onUpdate({ [field]: value });
+}
