@@ -158,3 +158,4 @@ const Sidebar = ({ isMenuOpen, project, setProject, isGenerating, setIsGeneratin
         </div>
     )
 }
+export default Sidebar
