@@ -99,3 +99,4 @@ return (
     </div>
 )
 }
+export default EditorPanel
