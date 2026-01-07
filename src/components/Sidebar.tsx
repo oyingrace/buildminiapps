@@ -82,3 +82,23 @@ const Sidebar = ({ isMenuOpen, project, setProject, isGenerating, setIsGeneratin
                     {[...project.conversation, ...project.versions]
                         .sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()).map((message) => {
                             const isMessage = 'content' in message;
+                            if (isMessage) {
+                                const msg = message as Message;
+                                const isUser = msg.role === 'user';
+                                return (
+                                    <div key={msg.id} className={`flex items-start gap-3 ${isUser ? "justify-end" : "justify-start"}`}>
+                                        {!isUser && (
+                                            <div className='w-8 h-8 rounded-full bg-linear-to-br from-indigo-600 to-indigo-700 flex items-center justify-center'>
+                                                <BotIcon className='size-5 text-white' />
+                                            </div>
+                                        )}
+                                        <div className={`max-w-[80%] p-2 px-4 rounded-2xl shadow-sm text-sm mt-5 leading-relaxed ${isUser ? "bg-linear-to-r from-indigo-500 to-indigo-600 text-white rounded-tr-none" : "rounded-tl-none bg-gray-800 text-gray-100"}`}>
+                                            {msg.content}
+                                        </div>
+                                        {isUser && (
+                                            <div className='w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center'>
+                                                <UserIcon className='size-5 text-gray-200' />
+                                            </div>
+                                        )}
+                                    </div>
+                                )
