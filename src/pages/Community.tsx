@@ -65,3 +65,11 @@ const Community = () => {
                                             <button className='px-2.5 py-0.5 mt-1 ml-2 text-xs bg-gray-800 border border-gray-700 rounded-full'>Website</button>
                                         </div>
                                         <p className='text-gray-400 mt-1 text-sm line-clamp-2'>{project.initial_prompt}</p>
+                                        <div className='flex justify-between items-center mt-6'>
+                                            <span className='text-xs text-gray-500'>{new Date(project.createdAt).toLocaleDateString()}</span>
+                                            <div className='flex gap-3 text-white text-sm'>
+
+                                                <button className='px-3 py-1.5 bg-white/10 hover:bg-white/15 rounded-md transition-colors flex items-center gap-2'>
+                                                    <span className='bg-gray-200 size-4.5 rounded-full text-black font-semibold flex items-center justify-center'>{project.user?.name?.slice(0, 1)}</span>
+                                                    {project.user?.name}
+                                                </button>
