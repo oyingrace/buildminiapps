@@ -50,3 +50,11 @@ return (
                 <label className="block text-xs font-medium text-gray-500 mb-1">Class Name</label>
                 <input type='text' value={values.className || ''} onChange={(e) => handleChange('className', e.target.value)} className='w-full text-sm p-2 border border-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none' />
             </div>
+
+            <div className='grid grid-cols-2 gap-3'>
+                <div>
+                    <label className="block text-xs font-medium text-gray-500 mb-1">Padding</label>
+                    <input type='text'
+                        value={values.styles.padding}
+                        onChange={(e) => handleStyleChange('padding', e.target.value)} className='w-full text-sm p-2 border border-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none' />
+                </div>
