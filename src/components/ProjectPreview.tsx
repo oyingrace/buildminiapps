@@ -50,3 +50,15 @@ const ProjectPreview = forwardRef<ProjectPreviewRef, ProjectPreviewProps>(({ pro
             return html;
         }
     }))
+
+    useEffect(() => {
+        const handleMessage = (event: MessageEvent) => {
+            if (event.data.type === 'ELEMENT_SELECTED') {
+                setSelectedElement(event.data.payload);
+            } else if (event.data.type === 'CLEAR_SELECTION') {
+                setSelectedElement(null)
+            }
+        }
+        window.addEventListener('message', handleMessage);
+        return () => window.removeEventListener('message', handleMessage)
+    }, [])
