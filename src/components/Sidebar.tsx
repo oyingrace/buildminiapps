@@ -67,3 +67,9 @@ const Sidebar = ({ isMenuOpen, project, setProject, isGenerating, setIsGeneratin
             clearInterval(interval)
         }
     }
+
+    useEffect(() => {
+        if (messageRef.current) {
+            messageRef.current.scrollIntoView({ behavior: 'smooth' })
+        }
+    }, [project.conversation.length, isGenerating])
