@@ -62,3 +62,12 @@ const ProjectPreview = forwardRef<ProjectPreviewRef, ProjectPreviewProps>(({ pro
         window.addEventListener('message', handleMessage);
         return () => window.removeEventListener('message', handleMessage)
     }, [])
+
+    const handleUpdate = (updates: any) => {
+        if (iframeRef.current?.contentWindow) {
+            iframeRef.current.contentWindow.postMessage({
+                type: 'UPDATE_ELEMENT',
+                payload: updates
+            }, '*')
+        }
+    }
