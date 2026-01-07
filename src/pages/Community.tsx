@@ -21,3 +21,6 @@ const Community = () => {
             toast.error(error?.response?.data?.message || error.message);
         }
     }
+    useEffect(() => {
+        fetchProjects()
+    }, [])
