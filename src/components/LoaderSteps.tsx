@@ -7,3 +7,15 @@ const steps = [
     { icon: TriangleIcon, label: "Assembling UI components…" },
     { icon: CircleIcon, label: "Finalizing your website…" },
 ]
+
+const STEP_DURATION = 45000
+
+const LoaderSteps = () => {
+    const [current, setCurrent] = useState(0)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((s) => (s + 1) % steps.length)
+        }, STEP_DURATION);
+        return () => clearInterval(interval)
+    }, [])
