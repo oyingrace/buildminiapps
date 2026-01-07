@@ -32,3 +32,12 @@ const handleStyleChange = (styleName: string, value: string) => {
     setValues({ ...values, styles: newStyles });
     onUpdate({ styles: { [styleName]: value } })
 }
+
+return (
+    <div className='absolute top-4 right-4 w-80 bg-white rounded-lg shadow-xl border border-gray-200 p-4 z-50 animate-fade-in fade-in'>
+        <div className='flex justify-between items-center mb-4'>
+            <h3 className='font-semibold text-gray-800'>Edit Element</h3>
+            <button onClick={onClose} className='p-1 hover:bg-gray-100 rounded-full'>
+                <X className='w-4 h-4 text-gray-500' />
+            </button>
+        </div>
