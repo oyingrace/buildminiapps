@@ -71,3 +71,15 @@ const ProjectPreview = forwardRef<ProjectPreviewRef, ProjectPreviewProps>(({ pro
             }, '*')
         }
     }
+
+    const injectPreview = (html: string) => {
+        if (!html) return '';
+        if (!showEditorPanel) return html
+
+        if (html.includes('</body>')) {
+            return html.replace('</body>', iframeScript + '</body>')
+        } else {
+            return html + iframeScript;
+        }
+    }
+
