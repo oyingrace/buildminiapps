@@ -31,3 +31,21 @@ model User {
 
   @@map("user")
 }
+
+model WebsiteProject {
+  id                    String  @id @default(uuid())
+  name                  String
+  initial_prompt        String
+  current_code          String?
+  current_version_index String  @default("")
+  userId                String
+  isPublished           Boolean @default(false)
+
+  // Relations
+  conversation Conversation[]
+  versions     Version[]
+  user         User           @relation(fields: [userId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
