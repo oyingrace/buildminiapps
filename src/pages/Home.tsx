@@ -9,3 +9,6 @@ const Home = () => {
 
     const { data: session } = authClient.useSession()
     const navigate = useNavigate()
+
+    const [input, setInput] = useState('');
+    const [loading, setLoading] = useState(false)
