@@ -19,3 +19,4 @@ const LoaderSteps = () => {
         }, STEP_DURATION);
         return () => clearInterval(interval)
     }, [])
+    const Icon = steps[current].icon;
