@@ -49,3 +49,8 @@ model WebsiteProject {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+enum Role {
+  user
+  assistant
+}
