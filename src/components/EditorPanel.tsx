@@ -41,3 +41,12 @@ return (
                 <X className='w-4 h-4 text-gray-500' />
             </button>
         </div>
+        <div className='space-y-4 text-black'>
+            <div>
+                <label className="block text-xs font-medium text-gray-500 mb-1">Text Content</label>
+                <textarea value={values.text} onChange={(e) => handleChange('text', e.target.value)} className='w-full text-sm p-2 border border-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none min-h-20' />
+            </div>
+            <div>
+                <label className="block text-xs font-medium text-gray-500 mb-1">Class Name</label>
+                <input type='text' value={values.className || ''} onChange={(e) => handleChange('className', e.target.value)} className='w-full text-sm p-2 border border-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none' />
+            </div>
