@@ -22,3 +22,9 @@ const Navbar = () => {
             console.log(error);
         }
     }
+
+    useEffect(() => {
+        if (session?.user) {
+            getCredits()
+        }
+    }, [session?.user])
