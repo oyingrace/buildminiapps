@@ -44,3 +44,26 @@ const Sidebar = ({ isMenuOpen, project, setProject, isGenerating, setIsGeneratin
             toast.error(error?.response?.data?.message || error.message);
             console.log(error);
         }
+    }
+
+    const handleRevisions = async (e: React.FormEvent) => {
+        e.preventDefault()
+        let interval: number | undefined;
+        try {
+            setIsGenerating(true);
+            interval = setInterval(() => {
+                fetchProject();
+            }, 10000)
+            const { data } = await api.post(`/api/project/revision/${project.id}`, { message: input })
+            fetchProject();
+            toast.success(data.message)
+            setInput('')
+            clearInterval(interval)
+            setIsGenerating(false);
+        } catch (error: any) {
+            setIsGenerating(false);
+            toast.error(error?.response?.data?.message || error.message);
+            console.log(error);
+            clearInterval(interval)
+        }
+    }
