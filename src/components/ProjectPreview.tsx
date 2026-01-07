@@ -107,3 +107,4 @@ const ProjectPreview = forwardRef<ProjectPreviewRef, ProjectPreviewProps>(({ pro
         </div>
     )
 })
+export default ProjectPreview
