@@ -54,3 +54,14 @@ enum Role {
   user
   assistant
 }
+
+model Conversation {
+  id        String   @id @default(uuid())
+  role      Role
+  content   String
+  timestamp DateTime @default(now())
+  projectId String
+
+  // Relations
+  project WebsiteProject @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
