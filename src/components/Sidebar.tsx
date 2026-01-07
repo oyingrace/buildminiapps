@@ -73,3 +73,12 @@ const Sidebar = ({ isMenuOpen, project, setProject, isGenerating, setIsGeneratin
             messageRef.current.scrollIntoView({ behavior: 'smooth' })
         }
     }, [project.conversation.length, isGenerating])
+
+    return (
+        <div className={`h-full  sm:max-w-sm rounded-xl bg-gray-900 border-gray-800 transition-all ${isMenuOpen ? 'max-sm:w-0 overflow-hidden' : 'w-full'}`}>
+            <div className='flex flex-col h-full'>
+                {/* Messages container */}
+                <div className='flex-1 overflow-y-auto no-scrollbar px-3 flex flex-col gap-4'>
+                    {[...project.conversation, ...project.versions]
+                        .sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()).map((message) => {
+                            const isMessage = 'content' in message;
