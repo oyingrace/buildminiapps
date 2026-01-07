@@ -8,3 +8,4 @@ import { toast } from 'sonner';
 const Home = () => {
 
     const { data: session } = authClient.useSession()
+    const navigate = useNavigate()
