@@ -71,3 +71,8 @@ const Home = () => {
                 <img className="max-w-28 md:max-w-32" src="https://saasly.prebuiltui.com/assets/companies-logo/walmart.svg" alt="" />
             </div>
         </section>
+
+    )
+}
+
+export default Home
