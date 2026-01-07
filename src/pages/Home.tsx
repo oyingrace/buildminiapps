@@ -31,3 +31,8 @@ const Home = () => {
             console.log(error);
         }
     }
+
+    return (
+
+        <section className="flex flex-col items-center text-white text-sm pb-20 px-4 font-poppins">
+
