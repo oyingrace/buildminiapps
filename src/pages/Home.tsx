@@ -46,3 +46,7 @@ const Home = () => {
             <h1 className="text-center text-[40px] leading-[48px] md:text-6xl md:leading-[70px] mt-4 font-semibold max-w-3xl">
                 Turn thoughts into websites instantly, with AI.
             </h1>
+
+            <p className="text-center text-base max-w-md mt-2">
+                Create, customize and publish website faster than ever with our AI Site Builder.
+            </p>
