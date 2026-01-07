@@ -65,3 +65,14 @@ model Conversation {
   // Relations
   project WebsiteProject @relation(fields: [projectId], references: [id], onDelete: Cascade)
 }
+
+model Version {
+  id          String   @id @default(uuid())
+  code        String
+  description String?
+  timestamp   DateTime @default(now())
+  projectId   String
+
+  // Relations
+  project WebsiteProject @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
