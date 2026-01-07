@@ -10,3 +10,7 @@ interface ProjectPreviewProps {
     device?: 'phone' | 'tablet' | 'desktop';
     showEditorPanel?: boolean;
 }
+
+export interface ProjectPreviewRef {
+    getCode: () => string | undefined;
+}
