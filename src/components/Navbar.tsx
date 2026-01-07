@@ -43,3 +43,19 @@ const Navbar = () => {
                     <Link to='/pricing'>Pricing</Link>
 
                 </div>
+
+                <div className="flex items-center gap-3">
+                    {!session?.user ? (
+                        <button onClick={() => navigate('/auth/signin')} className="px-6 py-1.5 max-sm:text-sm bg-indigo-600 active:scale-95 hover:bg-indigo-700 transition rounded">
+                            Get started
+                        </button>
+                    ) : (
+                        <>
+                            <button className='bg-white/10 px-5 py-1.5 text-xs sm:text-sm border text-gray-200 rounded-full'>
+                                Credits : <span className='text-indigo-300'>{credits}</span>
+                            </button>
+                            <UserButton size='icon' />
+                        </>
+
+                    )
+                    }
