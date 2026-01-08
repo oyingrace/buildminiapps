@@ -32,3 +32,8 @@ const MyProjects = () => {
             const { data } = await api.delete(`/api/project/${projectId}`)
             toast.success(data.message);
             fetchProjects()
+        } catch (error: any) {
+            console.log(error);
+            toast.error(error?.response?.data?.message || error.message)
+        }
+    }
