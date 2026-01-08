@@ -14,3 +14,14 @@ const Preview = () => {
     const { projectId, versionId } = useParams()
     const [code, setCode] = useState('');
     const [loading, setLoading] = useState(true);
+    const fetchCode = async () => {
+        try {
+            const { data } = await api.get(`/api/project/preview/${projectId}`)
+            setCode(data.project.current_code)
+            if (versionId) {
+                data.project.versions.forEach((version: Version) => {
+                    if (version.id === versionId) {
+                        setCode(version.code)
+                    }
+                })
+            }
