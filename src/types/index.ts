@@ -6,3 +6,7 @@ export interface User {
     name?: string;
     image?: string;
 }
+
+export interface Message {
+
+}
