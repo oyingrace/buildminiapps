@@ -31,3 +31,9 @@ const Preview = () => {
             console.log(error);
         }
     }
+
+    useEffect(() => {
+        if (!isPending && session?.user) {
+            fetchCode()
+        }
+    }, [session?.user])
