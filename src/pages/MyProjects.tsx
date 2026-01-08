@@ -97,3 +97,11 @@ const MyProjects = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    <div onClick={e => e.stopPropagation()}>
+                                        <TrashIcon className='absolute top-3 right-3 scale-0 group-hover:scale-100 bg-white p-1.5 size-7 rounded text-red-500 text-xl cursor-pointer transition-all' onClick={() => deleteProject(project.id)} />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                    </div>
