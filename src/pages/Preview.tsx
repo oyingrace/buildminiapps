@@ -12,3 +12,5 @@ const Preview = () => {
 
     const { data: session, isPending } = authClient.useSession()
     const { projectId, versionId } = useParams()
+    const [code, setCode] = useState('');
+    const [loading, setLoading] = useState(true);
