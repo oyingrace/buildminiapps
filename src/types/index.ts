@@ -3,5 +3,6 @@ export interface User {
     email: string;
     fullName?: string;
     imageUrl?: string;
+    name?: string;
 
 }
