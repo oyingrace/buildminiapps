@@ -37,3 +37,12 @@ const MyProjects = () => {
             toast.error(error?.response?.data?.message || error.message)
         }
     }
+
+    useEffect(() => {
+        if (session?.user && !isPending) {
+            fetchProjects()
+        } else if (!isPending && !session?.user) {
+            navigate('/');
+            toast('Please login to view your projects');
+        }
+    }, [session?.user])
