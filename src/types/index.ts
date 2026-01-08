@@ -11,4 +11,5 @@ export interface Message {
     id: string;
     role: any;
     content: string;
+    timestamp: string;
 }
