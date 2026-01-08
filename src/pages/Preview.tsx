@@ -6,3 +6,9 @@ import type { Project, Version } from "../types";
 import api from "@/configs/axios";
 import { toast } from "sonner";
 import { authClient } from "@/lib/auth-client";
+
+
+const Preview = () => {
+
+    const { data: session, isPending } = authClient.useSession()
+    const { projectId, versionId } = useParams()
