@@ -24,3 +24,11 @@ const MyProjects = () => {
             toast.error(error?.response?.data?.message || error.message)
         }
     }
+
+    const deleteProject = async (projectId: string) => {
+        try {
+            const confirm = window.confirm('Are you sure you want to delete this project?');
+            if (!confirm) return;
+            const { data } = await api.delete(`/api/project/${projectId}`)
+            toast.success(data.message);
+            fetchProjects()
