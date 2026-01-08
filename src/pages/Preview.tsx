@@ -45,3 +45,11 @@ const Preview = () => {
             </div>
         )
     }
+    return (
+        <div className="h-screen">
+            {code && <ProjectPreview project={{ current_code: code } as Project} isGenerating={false} showEditorPanel={false} />}
+        </div>
+    )
+}
+
+export default Preview
