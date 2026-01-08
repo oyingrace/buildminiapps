@@ -11,3 +11,5 @@ import { authClient } from '@/lib/auth-client';
 const MyProjects = () => {
     const { data: session, isPending } = authClient.useSession()
     const [loading, setLoading] = useState(true);
+    const [projects, setProjects] = useState<Project[]>([])
+    const navigate = useNavigate()
