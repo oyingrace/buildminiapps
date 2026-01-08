@@ -7,3 +7,7 @@ import Footer from '../components/Footer';
 import api from '@/configs/axios';
 import { toast } from 'sonner';
 import { authClient } from '@/lib/auth-client';
+
+const MyProjects = () => {
+    const { data: session, isPending } = authClient.useSession()
+    const [loading, setLoading] = useState(true);
