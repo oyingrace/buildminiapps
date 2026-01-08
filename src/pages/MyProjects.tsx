@@ -61,3 +61,16 @@ const MyProjects = () => {
                                 <PlusIcon size={18} /> Create New
                             </button>
                         </div>
+
+                        <div className='flex flex-wrap gap-3.5'>
+                            {projects.map((project) => (
+                                <div onClick={() => navigate(`/projects/${project.id}`)} key={project.id} className='relative group w-72 max-sm:mx-auto cursor-pointer bg-gray-900/60 border border-gray-700 rounded-lg overflow-hidden shadow-md group hover:shadow-indigo-700/30 hover:border-indigo-800/80 transition-all duration-300'>
+                                    {/* Desktop-like Mini Preview */}
+                                    <div className='relative w-full h-40 bg-gray-900 overflow-hidden border-b border-gray-800'>
+                                        {project.current_code ? (
+                                            <iframe
+                                                srcDoc={project.current_code}
+                                                className='absolute top-0 left-0 w-[1200px] h-[800px] origin-top-left pointer-events-none'
+                                                sandbox='allow-scripts allow-same-origin'
+                                                style={{ transform: 'scale(0.25)' }} />
+                                        )
