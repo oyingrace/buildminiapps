@@ -13,3 +13,14 @@ const MyProjects = () => {
     const [loading, setLoading] = useState(true);
     const [projects, setProjects] = useState<Project[]>([])
     const navigate = useNavigate()
+
+    const fetchProjects = async () => {
+        try {
+            const { data } = await api.get('/api/user/projects')
+            setProjects(data.projects)
+            setLoading(false)
+        } catch (error: any) {
+            console.log(error);
+            toast.error(error?.response?.data?.message || error.message)
+        }
+    }
