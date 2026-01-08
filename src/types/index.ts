@@ -9,4 +9,5 @@ export interface User {
 
 export interface Message {
     id: string;
+    role: any;
 }
