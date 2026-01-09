@@ -156,3 +156,13 @@ const Projects = () => {
                 </div>
             </div>
         </div>
+    )
+        :
+        (
+            <div className='flex items-center justify-center h-screen'>
+                <p className="text-2xl font-medium text-gray-200">Unable to load project!</p>
+            </div>
+        )
+}
+
+export default Projects
