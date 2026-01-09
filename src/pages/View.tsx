@@ -6,3 +6,5 @@ import ProjectPreview from "../components/ProjectPreview";
 import type { Project } from "../types";
 import api from "@/configs/axios";
 import { toast } from "sonner";
+
+const View = () => {
