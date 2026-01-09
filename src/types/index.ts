@@ -19,3 +19,8 @@ export interface Version {
     timestamp: string;
     code: string;
 }
+
+export interface Project {
+    id: string;
+
+}
