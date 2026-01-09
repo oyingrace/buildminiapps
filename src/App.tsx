@@ -33,3 +33,4 @@ const App = () => {
         <Route path='/projects' element={<MyProjects />} />
         <Route path='/preview/:projectId' element={<Preview />} />
         <Route path='/preview/:projectId/:versionId' element={<Preview />} />
+        <Route path='/community' element={<Community />} />
