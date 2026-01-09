@@ -127,3 +127,5 @@ const Projects = () => {
                 {/* middle  */}
                 <div className='hidden sm:flex gap-2 bg-gray-950 p-1.5 rounded-md'>
                     <SmartphoneIcon onClick={() => setDevice('phone')} className={`size-6 p-1 rounded cursor-pointer ${device === 'phone' ? "bg-gray-700" : ""}`} />
+
+                    <TabletIcon onClick={() => setDevice('tablet')} className={`size-6 p-1 rounded cursor-pointer ${device === 'tablet' ? "bg-gray-700" : ""}`} />
