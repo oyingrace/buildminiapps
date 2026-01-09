@@ -108,3 +108,4 @@ const Projects = () => {
     }
 
     return project ? (
+        <div className='flex flex-col h-screen w-full bg-gray-900 text-white'></div>
