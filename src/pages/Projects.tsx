@@ -22,3 +22,5 @@ const Projects = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isSaving, setIsSaving] = useState(false)
+
+    const previewRef = useRef<ProjectPreviewRef>(null)
