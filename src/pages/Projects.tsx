@@ -24,3 +24,15 @@ const Projects = () => {
     const [isSaving, setIsSaving] = useState(false)
 
     const previewRef = useRef<ProjectPreviewRef>(null)
+
+    const fetchProject = async () => {
+        try {
+            const { data } = await api.get(`/api/user/project/${projectId}`);
+            setProject(data.project)
+            setIsGenerating(data.project.current_code ? false : true)
+            setLoading(false)
+        } catch (error: any) {
+            toast.error(error?.response?.data?.message || error.message);
+            console.log(error);
+        }
+    }
