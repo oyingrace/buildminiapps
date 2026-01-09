@@ -89,3 +89,10 @@ const Projects = () => {
             toast("Please login to view your projects")
         }
     }, [session?.user])
+
+    useEffect(() => {
+        if (project && !project.current_code) {
+            const intervalId = setInterval(fetchProject, 10000);
+            return () => clearInterval(intervalId)
+        }
+    }, [project])
