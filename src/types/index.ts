@@ -22,5 +22,5 @@ export interface Version {
 
 export interface Project {
     id: string;
-
+    name: string;
 }
