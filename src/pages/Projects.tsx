@@ -13,3 +13,9 @@ const Projects = () => {
     const { projectId } = useParams()
     const navigate = useNavigate()
     const { data: session, isPending } = authClient.useSession()
+
+    const [project, setProject] = useState<Project | null>(null)
+    const [loading, setLoading] = useState(true)
+
+    const [isGenerating, setIsGenerating] = useState(true)
+    const [device, setDevice] = useState<'phone' | 'tablet' | 'desktop'>("desktop")
