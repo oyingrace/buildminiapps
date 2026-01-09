@@ -11,3 +11,9 @@ const View = () => {
     const { projectId } = useParams();
     const [code, setCode] = useState('')
   const [loading, setLoading] = useState(true)
+
+  const fetchCode = async () => {
+    try {
+      const { data } = await api.get(`/api/project/published/${projectId}`);
+      setCode(data.code)
+      setLoading(false)
