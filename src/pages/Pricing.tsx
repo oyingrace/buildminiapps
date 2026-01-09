@@ -13,3 +13,7 @@ interface Plan {
     description: string;
     features: string[];
 }
+
+
+const { data: session } = authClient.useSession()
+const [plans] = React.useState<Plan[]>(appPlans)
