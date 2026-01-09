@@ -29,4 +29,6 @@ export interface Project {
     updatedAt: string;
     userId: string;
     user?: User;
+    isPublished?: boolean;
+    versionId?: string;
 }
