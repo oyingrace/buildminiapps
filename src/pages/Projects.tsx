@@ -19,3 +19,6 @@ const Projects = () => {
 
     const [isGenerating, setIsGenerating] = useState(true)
     const [device, setDevice] = useState<'phone' | 'tablet' | 'desktop'>("desktop")
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isSaving, setIsSaving] = useState(false)
