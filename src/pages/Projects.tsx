@@ -124,3 +124,6 @@ const Projects = () => {
                             : <XIcon onClick={() => setIsMenuOpen(true)} className="size-6 cursor-pointer" />}
                     </div>
                 </div>
+                {/* middle  */}
+                <div className='hidden sm:flex gap-2 bg-gray-950 p-1.5 rounded-md'>
+                    <SmartphoneIcon onClick={() => setDevice('phone')} className={`size-6 p-1 rounded cursor-pointer ${device === 'phone' ? "bg-gray-700" : ""}`} />
