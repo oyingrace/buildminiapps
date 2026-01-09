@@ -12,3 +12,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
             Link={(props) => <NavLink {...props} to={props.href} />}
         >
             {children}
+        </AuthUIProvider>
+    )
+}
