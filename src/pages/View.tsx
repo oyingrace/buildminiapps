@@ -9,3 +9,5 @@ import { toast } from "sonner";
 
 const View = () => {
     const { projectId } = useParams();
+    const [code, setCode] = useState('')
+  const [loading, setLoading] = useState(true)
