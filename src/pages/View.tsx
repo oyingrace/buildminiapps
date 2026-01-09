@@ -8,3 +8,4 @@ import api from "@/configs/axios";
 import { toast } from "sonner";
 
 const View = () => {
+    const { projectId } = useParams();
