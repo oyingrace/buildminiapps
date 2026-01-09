@@ -37,3 +37,4 @@ const App = () => {
         <Route path='/view/:projectId' element={<View />} />
         <Route path="/auth/:pathname" element={<AuthPage />} />
         <Route path="/account/settings" element={<Settings />} />
+        <Route path='/loading' element={<Loading />}/>
