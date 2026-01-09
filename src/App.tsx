@@ -1,3 +1,4 @@
+
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import Pricing from './pages/Pricing'
@@ -12,21 +13,20 @@ import AuthPage from './pages/auth/AuthPage'
 import Settings from './pages/Settings'
 import Loading from './pages/Loading'
 
-
 const App = () => {
 
-    const { pathname } = useLocation()
+  const { pathname } = useLocation()
 
-    const hideNavbar = pathname.startsWith('/projects/') && pathname !== '/projects'
+  const hideNavbar = pathname.startsWith('/projects/') && pathname !== '/projects'
                       || pathname.startsWith('/view/')
                       || pathname.startsWith('/preview/')
 
-                      return (
-                        <div>
-                        <Toaster />
-                          {!hideNavbar && <Navbar />}
-
-                          <Routes>
+  return (
+    <div>
+    <Toaster />
+      {!hideNavbar && <Navbar />}
+      
+      <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/projects/:projectId' element={<Projects />} />
@@ -38,7 +38,9 @@ const App = () => {
         <Route path="/auth/:pathname" element={<AuthPage />} />
         <Route path="/account/settings" element={<Settings />} />
         <Route path='/loading' element={<Loading />}/>
-        </Routes>
+      </Routes>
     </div>
   )
 }
+
+export default App
