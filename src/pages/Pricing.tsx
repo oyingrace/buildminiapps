@@ -14,17 +14,18 @@ interface Plan {
     features: string[];
 }
 
+const Pricing = () => {
 
-const { data: session } = authClient.useSession()
-const [plans] = React.useState<Plan[]>(appPlans)
+    const { data: session } = authClient.useSession()
+    const [plans] = React.useState<Plan[]>(appPlans)
 
-const handlePurchase = async (planId: string) => {
-    try {
-        if (!session?.user) return toast('Please login to purchase credits')
-        const { data } = await api.post('/api/user/purchase-credits', { planId })
-        window.location.href = data.payment_link;
-    } catch (error: any) {
-        toast.error(error?.response?.data?.message || error.message);
-        console.log(error);
+    const handlePurchase = async (planId: string) => {
+        try {
+            if (!session?.user) return toast('Please login to purchase credits')
+            const { data } = await api.post('/api/user/purchase-credits', { planId })
+            window.location.href = data.payment_link;
+        } catch (error: any) {
+            toast.error(error?.response?.data?.message || error.message);
+            console.log(error);
+        }
     }
-}
