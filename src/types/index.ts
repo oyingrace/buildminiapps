@@ -25,4 +25,6 @@ export interface Project {
     name: string;
     initial_prompt: string;
     current_code: string;
+    createdAt: string;
+    updatedAt: string;
 }
