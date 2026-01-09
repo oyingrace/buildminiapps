@@ -13,3 +13,8 @@ export interface Message {
     content: string;
     timestamp: string;
 }
+
+export interface Version {
+    id: string;
+
+}
