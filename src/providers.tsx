@@ -1,0 +1,1 @@
+import { AuthUIProvider } from "@daveyplate/better-auth-ui"
