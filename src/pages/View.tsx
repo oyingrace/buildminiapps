@@ -17,3 +17,8 @@ const View = () => {
       const { data } = await api.get(`/api/project/published/${projectId}`);
       setCode(data.code)
       setLoading(false)
+    } catch (error: any) {
+        toast.error(error?.response?.data?.message || error.message);
+        console.log(error);
+      }
+    }
