@@ -34,3 +34,4 @@ const App = () => {
         <Route path='/preview/:projectId' element={<Preview />} />
         <Route path='/preview/:projectId/:versionId' element={<Preview />} />
         <Route path='/community' element={<Community />} />
+        <Route path='/view/:projectId' element={<View />} />
