@@ -22,3 +22,7 @@ const View = () => {
         console.log(error);
       }
     }
+
+    useEffect(()=>{
+        fetchCode()
+      },[])
