@@ -8,7 +8,6 @@ import api from '@/configs/axios'
 import { toast } from 'sonner'
 import { authClient } from '@/lib/auth-client'
 
-
 const Projects = () => {
     const { projectId } = useParams()
     const navigate = useNavigate()
@@ -106,7 +105,6 @@ const Projects = () => {
             </>
         )
     }
-
     return project ? (
         <div className='flex flex-col h-screen w-full bg-gray-900 text-white'>
             {/* builder navbar  */}
@@ -140,6 +138,9 @@ const Projects = () => {
                     <Link target='_blank' to={`/preview/${projectId}`} className="flex items-center gap-2 px-4 py-1 rounded sm:rounded-sm border border-gray-700 hover:border-gray-500 transition-colors">
                         <FullscreenIcon size={16} /> Preview
                     </Link>
+                    <button onClick={downloadCode} className='bg-linear-to-br from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white px-3.5 py-1 flex items-center gap-2 rounded sm:rounded-sm transition-colors'>
+                        <ArrowBigDownDashIcon size={16} /> Download
+                    </button>
                     <button onClick={togglePublish} className='bg-linear-to-br from-indigo-700 to-indigo-600 hover:from-indigo-600 hover:to-indigo-500 text-white px-3.5 py-1 flex items-center gap-2 rounded sm:rounded-sm transition-colors'>
                         {project.isPublished ?
                             <EyeOffIcon size={16} /> : <EyeIcon size={16} />
