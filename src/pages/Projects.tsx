@@ -12,3 +12,4 @@ import { authClient } from '@/lib/auth-client'
 const Projects = () => {
     const { projectId } = useParams()
     const navigate = useNavigate()
+    const { data: session, isPending } = authClient.useSession()
