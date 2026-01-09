@@ -25,3 +25,6 @@ const App = () => {
                         <div>
                         <Toaster />
                           {!hideNavbar && <Navbar />}
+
+                          <Routes>
+        <Route path='/' element={<Home />} />
