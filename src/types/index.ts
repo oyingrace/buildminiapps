@@ -17,4 +17,5 @@ export interface Message {
 export interface Version {
     id: string;
     timestamp: string;
+    code: string;
 }
