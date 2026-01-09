@@ -80,3 +80,12 @@ const Projects = () => {
             console.log(error);
         }
     }
+
+    useEffect(() => {
+        if (session?.user) {
+            fetchProject();
+        } else if (!isPending && !session?.user) {
+            navigate("/")
+            toast("Please login to view your projects")
+        }
+    }, [session?.user])
