@@ -20,3 +20,8 @@ const App = () => {
     const hideNavbar = pathname.startsWith('/projects/') && pathname !== '/projects'
                       || pathname.startsWith('/view/')
                       || pathname.startsWith('/preview/')
+
+                      return (
+                        <div>
+                        <Toaster />
+                          {!hideNavbar && <Navbar />}
