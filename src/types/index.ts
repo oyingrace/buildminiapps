@@ -33,4 +33,5 @@ export interface Project {
     versionId?: string;
     conversation: Message[];
     versions: Version[];
+    current_version_index: string;
 }
