@@ -31,7 +31,7 @@ const Pricing = () => {
     }
 
     return (
-    <>
+        <>
             <div className='w-full max-w-5xl mx-auto z-20 max-md:px-4 min-h-[80vh]'>
                 <div className='text-center mt-16'>
                     <h2 className='text-gray-100 text-3xl font-medium'>Choose Your Plan</h2>
@@ -67,4 +67,12 @@ const Pricing = () => {
                         ))}
                     </div>
                 </div>
+                <p className='mx-auto text-center text-sm max-w-md mt-10 text-white/60 font-light'>Project <span className='text-white'> Creation / Revision</span> consume <span className='text-white'>5 credits </span>. You can purchase more credits to create more projects.</p>
+            </div>
+            <Footer />
+        </>
+    )
+}
+
+export default Pricing
 
