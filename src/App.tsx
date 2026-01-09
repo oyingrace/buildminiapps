@@ -31,3 +31,4 @@ const App = () => {
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/projects/:projectId' element={<Projects />} />
         <Route path='/projects' element={<MyProjects />} />
+        <Route path='/preview/:projectId' element={<Preview />} />
