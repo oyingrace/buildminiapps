@@ -106,3 +106,5 @@ const Projects = () => {
             </>
         )
     }
+
+    return project ? (
