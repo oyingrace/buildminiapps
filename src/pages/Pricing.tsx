@@ -46,3 +46,25 @@ const Pricing = () => {
                                     <span className="text-4xl font-bold">{plan.price}</span>
                                     <span className="text-gray-300"> / {plan.credits} credits</span>
                                 </div>
+
+                                <p className="text-gray-300 mb-6">{plan.description}</p>
+
+                                <ul className="space-y-1.5 mb-6 text-sm">
+                                    {plan.features.map((feature, i) => (
+                                        <li key={i} className="flex items-center">
+                                            <svg className="h-5 w-5 text-indigo-300 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                            <span className="text-gray-400">{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <button onClick={() => handlePurchase(plan.id)} className="w-full py-2 px-4 bg-indigo-500 hover:bg-indigo-600 active:scale-95 text-sm rounded-md transition-all">
+                                    Buy Now
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
