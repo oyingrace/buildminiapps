@@ -29,7 +29,7 @@ const Navbar = () => {
         }
     }, [session?.user])
 
-    eturn(
+    return(
         <>
             <nav className="z-50 flex items-center justify-between w-full py-4 px-4 md:px-16 lg:px-24 xl:px-32 backdrop-blur border-b text-white border-slate-800">
                 <Link to='/'>
