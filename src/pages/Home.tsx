@@ -44,11 +44,11 @@ const Home = () => {
             </a>
 
             <h1 className="text-center text-[40px] leading-[48px] md:text-6xl md:leading-[70px] mt-4 font-semibold max-w-3xl">
-                Turn thoughts into websites instantly, with AI.
+                Turn thoughts into MiniApps instantly, with AI.
             </h1>
 
             <p className="text-center text-base max-w-md mt-2">
-                Create, customize and publish website faster than ever with our AI Site Builder.
+                Create, customize and publish miniapps faster than ever with our AI Builder.
             </p>
 
             <form onSubmit={onSubmitHandler} className="bg-white/10 max-w-2xl w-full rounded-xl p-4 mt-10 border border-indigo-600/70 focus-within:ring-2 ring-indigo-500 transition-all">
