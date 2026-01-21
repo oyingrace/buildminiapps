@@ -46,11 +46,11 @@ const Home = () => {
         </a>
 
         <h1 className="text-center text-[40px] leading-[48px] md:text-6xl md:leading-[70px] mt-4 font-semibold max-w-3xl">
-          Turn thoughts into websites instantly, with AI.
+          Turn thoughts into Mini Apps instantly, with AI.
         </h1>
 
         <p className="text-center text-base max-w-md mt-2">
-          Create, customize and publish website faster than ever with our AI Site Builder.
+          Create, customize and publish onchain mini apps faster than ever with our AI Builder.
         </p>
 
         <form onSubmit={onSubmitHandler} className="bg-white/10 max-w-2xl w-full rounded-xl p-4 mt-10 border border-indigo-600/70 focus-within:ring-2 ring-indigo-500 transition-all">
@@ -65,13 +65,6 @@ const Home = () => {
           </button>
         </form>
 
-        <div className="flex flex-wrap items-center justify-center gap-16 md:gap-20 mx-auto mt-16">
-          <img className="max-w-28 md:max-w-32" src="https://saasly.prebuiltui.com/assets/companies-logo/framer.svg" alt="" />
-          <img className="max-w-28 md:max-w-32" src="https://saasly.prebuiltui.com/assets/companies-logo/huawei.svg" alt="" />
-          <img className="max-w-28 md:max-w-32" src="https://saasly.prebuiltui.com/assets/companies-logo/instagram.svg" alt="" />
-          <img className="max-w-28 md:max-w-32" src="https://saasly.prebuiltui.com/assets/companies-logo/microsoft.svg" alt="" />
-          <img className="max-w-28 md:max-w-32" src="https://saasly.prebuiltui.com/assets/companies-logo/walmart.svg" alt="" />
-        </div>
       </section>
 
   )
